@@ -1,0 +1,25 @@
+{
+  "name": "telbot",
+  "version": "1.0.0",
+  "description": "A Telegram bot which ask about user interests",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gauravumrani@bitbucket.org/gauravumrani/telbot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "dialogflow"
+  ],
+  "author": "Gaurav Umrani, Rahul Goswami",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/gauravumrani/telbot#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
