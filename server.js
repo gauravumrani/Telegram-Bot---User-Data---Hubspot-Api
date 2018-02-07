@@ -15,7 +15,7 @@ const DEV_CONFIG ='true';
 const APIAI_ACCESS_TOKEN = "6d57aa97f2cf49459d03afdc6c09dace";
 const APIAI_LANG = "en";
 const TELEGRAM_TOKEN = "548428895:AAGb7UuHiuCQC2GsqMiTqgP5fb3j85KgLO0";
-const APP_NAME="https://f7d883c6.ngrok.io"
+const APP_NAME="https://0d2a1109.ngrok.io"
 var baseUrl = "";
 if (APP_NAME) {
     // Heroku case
