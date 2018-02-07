@@ -15,6 +15,8 @@ const DEV_CONFIG ='true';
 const APIAI_ACCESS_TOKEN = "6d57aa97f2cf49459d03afdc6c09dace";
 const APIAI_LANG = "en";
 const TELEGRAM_TOKEN = "548428895:AAGb7UuHiuCQC2GsqMiTqgP5fb3j85KgLO0";
+//https://protected-beyond-61453.herokuapp.com
+
 const APP_NAME="https://protected-beyond-61453.herokuapp.com"
 var baseUrl = "";
 if (APP_NAME) {
@@ -24,6 +26,8 @@ if (APP_NAME) {
     console.error('Set up the url of your service here and remove exit code!');
     process.exit(1);
 }
+//'mongodb://telebot:1234@ds227858.mlab.com:27858/bot'
+//mongodb://localhost:27017/bot
 mongoose.connect('mongodb://telebot:1234@ds227858.mlab.com:27858/bot');
 
 const botConfig = new TelegramBotConfig(

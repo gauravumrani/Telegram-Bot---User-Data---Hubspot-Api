@@ -124,6 +124,7 @@ module.exports = class TelegramBot {
                 apiaiRequest.on('response', (response) => {
                     var sessId = this._sessionIds.get(chatId);
                     var resultData = response.result;
+                    console.log(resultData);
                     botSchema.find({ "_id": sessId }, function (err, result) {
                         if (!result.length) {
                             var data = new botSchema({
@@ -197,7 +198,12 @@ module.exports = class TelegramBot {
                                     
                                 })
                             }
-                            if (resultData.metadata.intentName == "citizen-1" || resultData.metadata.intentName == "citizen-2" || resultData.metadata.intentName == "citizen-3") {
+                            if (resultData.metadata.intentName == "FinalInfo") {
+                                botSchema.update({ "_id": result[0]._id }, { "feedback": resultData.parameters['any'] }, function (err, result) {
+                                    
+                                })
+                            }
+                            if (resultData.metadata.intentName == "FinalInfo") {
                                 botSchema.find({ "_id": result[0]._id }, function (err, result) {
                                     console.log('Time to push');
                                     var userData=result[0];
@@ -233,7 +239,7 @@ module.exports = class TelegramBot {
                                             },
                                             {
                                                 "property": "add_info",
-                                                "value": "Not, Not Much \n But Okay Good Boy"
+                                                "value":userData.feedback
                                             },
                                             {
                                                 "property": "is_usa",
@@ -315,7 +321,7 @@ module.exports = class TelegramBot {
                                                 "I am a US Citizen (Accredited Investor)"
                                             ],
                                             [
-                                                "No"
+                                                "Not a US Citizen"
                                             ]
                                         ],
                                         one_time_keyboard: true,
