@@ -134,7 +134,7 @@ module.exports = class TelegramBot {
                         } else {
                             //console.log(msg.text.substring(0, 2));
                             if (resultData.metadata.intentName == "UserProvidesName") {
-                                botSchema.update({ "_id": result[0]._id }, { "name": resultData.parameters['given-name'] + " " + resultData.parameters['last-name'] }, function (err, result) {
+                                botSchema.update({ "_id": result[0]._id }, { "name": resultData.parameters['any'] }, function (err, result) {
                                     
                                 })
                             }
