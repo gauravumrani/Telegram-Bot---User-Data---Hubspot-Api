@@ -1,24 +1,19 @@
 {
   "name": "telbot",
   "version": "1.0.0",
-  "description": "A Telegram bot which ask about user interests",
+  "description": "A Telegram bot which ask about user data like name, email, interests and save data to hubspot contact via api",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gauravumrani@bitbucket.org/gauravumrani/telbot.git"
   },
   "keywords": [
     "telegram",
     "bot",
     "dialogflow"
   ],
-  "author": "Gaurav Umrani, Rahul Goswami",
+  "author": "Gaurav Umrani",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/gauravumrani/telbot#readme",
   "dependencies": {
     "apiai": "^4.0.3",
     "body-parser": "^1.18.2",

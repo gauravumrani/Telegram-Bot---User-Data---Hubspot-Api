@@ -20,7 +20,7 @@ const apiai = require('apiai');
 const uuid = require('node-uuid');
 const request = require('request');
 const botSchema = require('./bot');
-const hub_key = "38c61cba-4a3e-4f3d-8aae-6d647378336a";
+const hub_key = "hubspot key";
 module.exports = class TelegramBot {
 
     get apiaiService() {
@@ -205,7 +205,7 @@ module.exports = class TelegramBot {
                             }
                             if (resultData.metadata.intentName == "FinalInfo") {
                                 botSchema.find({ "_id": result[0]._id }, function (err, result) {
-                                    console.log('Time to push');
+                                    console.log('Time to push data to hubspot api');
                                     var userData=result[0];
                                     var userName=userData.name.split(" ");
                                     var headersOpt = {
